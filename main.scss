@@ -1,0 +1,335 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+*::selection{
+    color: white;
+    background-color: rgb(43, 52, 56);
+}
+
+body{
+    font-size: 62.5%;
+    margin: 0.3rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(51, 51, 51);
+    color: rgb(235, 235, 235);
+    font-family: 'Noto Serif JP', serif;
+}
+
+header{
+    padding: 1rem;
+    border-bottom: 0.1rem solid grey;
+    margin: 0.4rem;
+
+    .page-heading{
+        font-size: 2rem;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    .btn-cont{
+        width: 50%;
+        margin-left: auto;
+        display: flex;
+        flex-direction: row-reverse;
+
+        .download-btn{
+            background-color: rgb(0, 162, 255);
+            border-radius: 1rem;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            font-family: 'Noto Serif JP', serif;
+            margin: 0.2rem 0.5rem;
+        }
+        .download-btn:hover, .info:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.resume-container{
+    padding: 0.2rem;
+    color: black;
+    background-color: white;
+    
+    .resume-head{
+        border-bottom: 0.1rem solid grey;
+
+        .name{
+            padding: 0.2rem;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .about{
+            padding: 0.2rem;
+            font-size: 0.7rem;
+            color: grey;
+            margin-bottom: 0.3rem;
+        }
+    }
+
+    .main-resume.download-active{
+        .left-section{
+            .resume-section{
+                .section-content{
+                    .content-list{
+                        .content-item{
+                            .delete-info{
+                                display: none;
+                            }
+
+                            .content-item-desc-list{
+                                .content-item-desc-item{
+                                    .delete-info{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }  
+                    }
+                    .add-more{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .right-section{
+            .resume-section{
+                .resume-skills-list{
+                    .skill-item{
+                        .delete-info{
+                            display: none;
+                        }
+                    }
+                }
+                .add-more{
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+    .main-resume{
+        display: flex;
+        margin: 0.2rem;
+
+        .left-section{
+            width: 70%; 
+            border-right: 0.1rem solid grey;
+            padding: 0.2rem;
+
+
+            .resume-section{
+                .resume-section-head{
+                    font-weight: 800;
+                    font-size: 1rem;
+                }
+                .section-content{
+
+                    .content-list{
+                        padding: 0.3rem;
+
+                        .content-item{
+                            position: relative;
+                            margin: 0.3rem;
+                            border-bottom: 0.1rem solid rgba(128, 128, 128, 0.795);
+
+                            .delete-info{
+                                position: absolute;
+                                right: 0.4rem;
+                                font-size: 1rem;
+                                top: 0.4rem;
+                            }
+                            .delete-info:hover{
+                                cursor: pointer;
+                            }
+
+                            .content-item-head{
+                                font-size: 0.8rem;
+                                font-weight: 600;
+                            }
+
+                            .brief-cont{
+                                display: flex;
+
+                                .content-item-role{
+                                    color: grey;
+                                    padding: 0 0.3rem;
+                                    font-size: 0.6rem;
+                                    border-right: 0.1rem solid grey;
+                                }
+                                .content-item-duration{
+                                    color: grey;
+                                    font-size: 0.6rem;
+                                    padding-left: 0.3rem;
+                                }
+                            }
+
+                            .content-item-desc-list{
+                                padding: 0.1rem;
+
+                                .content-item-desc-item:not(:last-child){
+                                    border-bottom: 0.1rem solid rgba(128, 128, 128, 0.199);
+                                }
+
+                                .content-item-desc-item{
+                                    padding: 0.2rem;
+                                    position: relative;
+                                    list-style-type: "--";
+
+                                    .content-desc-text{
+                                        font-size: 0.6rem;
+                                    }
+                                    .delete-info{
+                                        position: absolute;
+                                        right: 0.2rem;
+                                        color: grey;
+                                        top: 50%;
+                                        font-size: 0.8rem;
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                            }
+                        }  
+                    }
+                    .add-more{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 1rem;
+                        font-size: 1rem;
+                        font-weight: 700;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        border: 0.1rem solid black;
+                        background-color: rgb(212, 212, 212);
+                        text-align: center;
+                        margin-top: 0.5rem;
+                    }
+                    .add-more:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .right-section{
+            width: 30%;
+            padding: 0.2rem;
+
+            .resume-section{
+                margin: 1rem 0.2rem;
+
+                .resume-sec-head{
+                    font-weight: 800;
+                    font-size: 1rem;
+                }
+
+                .resume-skills-list{
+                    margin: 0.3rem;
+                    padding-left: 0.8rem;
+                    .skill-item{
+                        position: relative;
+                        padding: 0.1rem;
+                        border-bottom: 0.1rem solid rgba(128, 128, 128, 0.774);
+                        margin: 0.2rem 0;
+
+                        .skill-head{
+                            font-weight: 600;
+                        }
+                        .skill-text{
+                            font-size: 0.7rem;
+
+                            .skill-link:hover{
+                                cursor: pointer;
+                            }
+                        }
+                        .delete-info{
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            color: grey;
+                            transform: translateY(-50%);
+                        }
+                        .delete-info:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .add-more{
+                    font-size: 1rem;
+                    border: 0.1rem solid black;
+                    margin: 0.3rem;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    font-weight: 700;
+                    background-color: rgb(209, 209, 209);
+                    border-radius: 10rem;
+                    text-align: center;
+                }
+
+                .add-more:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+footer{
+    border-top: 0.1rem solid grey;
+    margin: 0.4rem;
+
+    .foot-heading{
+        padding: 0.3rem;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .copyright{
+        text-align: center;
+        color: grey;
+        font-size: 0.8rem;
+    }
+
+    .social-med{
+        margin: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .soc-logo{
+            margin: 0.5rem;
+            a{
+                text-decoration: none;
+                font-size: 1.7rem;
+                color: rgb(175, 175, 175);
+                transition: all 0.5s ease;
+            }
+
+            .fa-facebook-square:hover{
+                color: rgb(0, 102, 255);
+            }
+            .fa-github:hover{
+                color: rgb(84, 6, 156);
+                
+            }
+            .fa-instagram:hover{
+                color: rgb(247, 78, 196);
+            }
+            .fa-linkedin-square:hover{
+                color: rgb(106, 180, 250);
+            }
+            .fa-envelope-o:hover{
+                color: rgb(255, 51, 0);
+            }
+        }
+    }
+}

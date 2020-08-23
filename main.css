@@ -1,0 +1,355 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+*::-moz-selection {
+  color: white;
+  background-color: #2b3438;
+}
+
+*::selection {
+  color: white;
+  background-color: #2b3438;
+}
+
+body {
+  font-size: 62.5%;
+  margin: 0.3rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #333333;
+  color: #ebebeb;
+  font-family: 'Noto Serif JP', serif;
+}
+
+header {
+  padding: 1rem;
+  border-bottom: 0.1rem solid grey;
+  margin: 0.4rem;
+}
+
+header .page-heading {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+header .btn-cont {
+  width: 50%;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+header .btn-cont .download-btn {
+  background-color: #00a2ff;
+  border-radius: 1rem;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  font-family: 'Noto Serif JP', serif;
+  margin: 0.2rem 0.5rem;
+}
+
+header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
+  cursor: pointer;
+}
+
+.resume-container {
+  padding: 0.2rem;
+  color: black;
+  background-color: white;
+}
+
+.resume-container .resume-head {
+  border-bottom: 0.1rem solid grey;
+}
+
+.resume-container .resume-head .name {
+  padding: 0.2rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.resume-container .resume-head .about {
+  padding: 0.2rem;
+  font-size: 0.7rem;
+  color: grey;
+  margin-bottom: 0.3rem;
+}
+
+.resume-container .main-resume.download-active .left-section .resume-section .section-content .content-list .content-item .delete-info {
+  display: none;
+}
+
+.resume-container .main-resume.download-active .left-section .resume-section .section-content .content-list .content-item .content-item-desc-list .content-item-desc-item .delete-info {
+  display: none;
+}
+
+.resume-container .main-resume.download-active .left-section .resume-section .section-content .add-more {
+  display: none;
+}
+
+.resume-container .main-resume.download-active .right-section .resume-section .resume-skills-list .skill-item .delete-info {
+  display: none;
+}
+
+.resume-container .main-resume.download-active .right-section .resume-section .add-more {
+  display: none;
+}
+
+.resume-container .main-resume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.2rem;
+}
+
+.resume-container .main-resume .left-section {
+  width: 70%;
+  border-right: 0.1rem solid grey;
+  padding: 0.2rem;
+}
+
+.resume-container .main-resume .left-section .resume-section .resume-section-head {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .content-list {
+  padding: 0.3rem;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item {
+  position: relative;
+  margin: 0.3rem;
+  border-bottom: 0.1rem solid rgba(128, 128, 128, 0.795);
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .delete-info {
+  position: absolute;
+  right: 0.4rem;
+  font-size: 1rem;
+  top: 0.4rem;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .delete-info:hover {
+  cursor: pointer;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .content-item-head {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .brief-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .brief-cont .content-item-role {
+  color: grey;
+  padding: 0 0.3rem;
+  font-size: 0.6rem;
+  border-right: 0.1rem solid grey;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .brief-cont .content-item-duration {
+  color: grey;
+  font-size: 0.6rem;
+  padding-left: 0.3rem;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .content-item-desc-list {
+  padding: 0.1rem;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .content-item-desc-list .content-item-desc-item:not(:last-child) {
+  border-bottom: 0.1rem solid rgba(128, 128, 128, 0.199);
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .content-item-desc-list .content-item-desc-item {
+  padding: 0.2rem;
+  position: relative;
+  list-style-type: "--";
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .content-item-desc-list .content-item-desc-item .content-desc-text {
+  font-size: 0.6rem;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .content-item-desc-list .content-item-desc-item .delete-info {
+  position: absolute;
+  right: 0.2rem;
+  color: grey;
+  top: 50%;
+  font-size: 0.8rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .add-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.1rem solid black;
+  background-color: #d4d4d4;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .add-more:hover {
+  cursor: pointer;
+}
+
+.resume-container .main-resume .right-section {
+  width: 30%;
+  padding: 0.2rem;
+}
+
+.resume-container .main-resume .right-section .resume-section {
+  margin: 1rem 0.2rem;
+}
+
+.resume-container .main-resume .right-section .resume-section .resume-sec-head {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.resume-container .main-resume .right-section .resume-section .resume-skills-list {
+  margin: 0.3rem;
+  padding-left: 0.8rem;
+}
+
+.resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item {
+  position: relative;
+  padding: 0.1rem;
+  border-bottom: 0.1rem solid rgba(128, 128, 128, 0.774);
+  margin: 0.2rem 0;
+}
+
+.resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item .skill-head {
+  font-weight: 600;
+}
+
+.resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item .skill-text {
+  font-size: 0.7rem;
+}
+
+.resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item .skill-text .skill-link:hover {
+  cursor: pointer;
+}
+
+.resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item .delete-info {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  color: grey;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item .delete-info:hover {
+  cursor: pointer;
+}
+
+.resume-container .main-resume .right-section .resume-section .add-more {
+  font-size: 1rem;
+  border: 0.1rem solid black;
+  margin: 0.3rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-weight: 700;
+  background-color: #d1d1d1;
+  border-radius: 10rem;
+  text-align: center;
+}
+
+.resume-container .main-resume .right-section .resume-section .add-more:hover {
+  cursor: pointer;
+}
+
+footer {
+  border-top: 0.1rem solid grey;
+  margin: 0.4rem;
+}
+
+footer .foot-heading {
+  padding: 0.3rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+footer .copyright {
+  text-align: center;
+  color: grey;
+  font-size: 0.8rem;
+}
+
+footer .social-med {
+  margin: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .social-med .soc-logo {
+  margin: 0.5rem;
+}
+
+footer .social-med .soc-logo a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: #afafaf;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+footer .social-med .soc-logo .fa-facebook-square:hover {
+  color: #0066ff;
+}
+
+footer .social-med .soc-logo .fa-github:hover {
+  color: #54069c;
+}
+
+footer .social-med .soc-logo .fa-instagram:hover {
+  color: #f74ec4;
+}
+
+footer .social-med .soc-logo .fa-linkedin-square:hover {
+  color: #6ab4fa;
+}
+
+footer .social-med .soc-logo .fa-envelope-o:hover {
+  color: #ff3300;
+}
+/*# sourceMappingURL=main.css.map */
