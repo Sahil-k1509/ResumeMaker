@@ -40,7 +40,6 @@ header .page-heading {
 }
 
 header .btn-cont {
-  width: 50%;
   margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,6 +96,10 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 }
 
 .resume-container .main-resume.download-active .left-section .resume-section .section-content .add-more {
+  display: none;
+}
+
+.resume-container .main-resume.download-active .right-section .resume-section #user-web-link {
   display: none;
 }
 

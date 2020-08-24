@@ -21,6 +21,10 @@ $(document).ready(function(){
         $('#main-resume').removeClass('download-active');
     });
 
+    $('#preview-btn').click(function(){
+        $('#main-resume').addClass('download-active');
+    });
+
 
 
     $('#add-certificate-btn').click(function(){
@@ -96,5 +100,10 @@ $(document).ready(function(){
         this.parentNode.parentNode.removeChild(this.parentNode);
     };
 
+
+    $('#user-web-link').keyup(function(){
+        $('#user-website').attr('href',this.value);
+    });
+    
 });
 

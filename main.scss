@@ -33,7 +33,6 @@ header{
     }
 
     .btn-cont{
-        width: 50%;
         margin-left: auto;
         display: flex;
         flex-direction: row-reverse;
@@ -102,6 +101,9 @@ header{
         }
         .right-section{
             .resume-section{
+                #user-web-link{
+                    display: none;
+                }
                 .resume-skills-list{
                     .skill-item{
                         .delete-info{
