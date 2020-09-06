@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+    var tableActive = false;
+
+    $('#switch-to-table').click(function(){
+        if (tableActive){
+            tableActive = false;
+            $('#edu-section-content').removeClass('active-tab');
+        } else {
+            tableActive = true;
+            $('#edu-section-content').addClass('active-tab');
+        }
+    });
+
 
     $('#download-btn').click(function(){
         const invoice = document.getElementById("resume");
@@ -25,6 +37,16 @@ $(document).ready(function(){
         $('#main-resume').addClass('download-active');
     });
 
+    $('#add-edutab-btn').click(function(){
+        document.getElementById('education-table').innerHTML += `<tr>
+                                                                    <td contenteditable='true'>Name of institute</td>
+                                                                    <td contenteditable='true'>Degree or Course</td>
+                                                                    <td contenteditable='true'>CGPA/grade</td>
+                                                                    <td contenteditable='true'>Excellence award</td>
+                                                                    <td><span contenteditable="true">from</span>-<span contenteditable="true">to</span></td>
+                                                                    <td><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></td>
+                                                                </tr>`;
+    });
 
 
     $('#add-certificate-btn').click(function(){
@@ -40,9 +62,11 @@ $(document).ready(function(){
     $('#add-edu-btn').click(function(){
         document.getElementById('edu-list').innerHTML +=    `<li class="content-item">
                                                                 <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div>
-                                                                <div class="content-item-head" contenteditable="true">School Name</div>
+                                                                <div class="content-item-head" contenteditable="true">Institution Name</div>
                                                                 
                                                                 <div class="brief-cont">
+                                                                    <div class="content-item-role" contenteditable="true">Degree</div>
+                                                                    <div class="content-item-role">Grade: <span contenteditable="true">CGPA/grade</span></div>
                                                                     <div class="content-item-duration"><span contenteditable="true">from</span> - <span contenteditable="true">to</span></div>
                                                                 </div>
                                                                 

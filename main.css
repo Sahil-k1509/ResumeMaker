@@ -87,6 +87,26 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   margin-bottom: 0.3rem;
 }
 
+.resume-container .main-resume.download-active #user-web-link {
+  display: none;
+}
+
+.resume-container .main-resume.download-active .left-section .resume-section .delete-section {
+  display: none;
+}
+
+.resume-container .main-resume.download-active .left-section .resume-section .switch-to-table {
+  display: none;
+}
+
+.resume-container .main-resume.download-active .left-section .resume-section .section-content .education-table th:last-child {
+  display: none;
+}
+
+.resume-container .main-resume.download-active .left-section .resume-section .section-content .education-table td:last-child {
+  display: none;
+}
+
 .resume-container .main-resume.download-active .left-section .resume-section .section-content .content-list .content-item .delete-info {
   display: none;
 }
@@ -99,7 +119,19 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   display: none;
 }
 
+.resume-container .main-resume.download-active .left-section .resume-section .section-content .add-more#add-edutab-btn {
+  display: none;
+}
+
+.resume-container .main-resume.download-active .left-section .resume-section .section-content .add-more#add-edu-btn {
+  display: none;
+}
+
 .resume-container .main-resume.download-active .right-section .resume-section #user-web-link {
+  display: none;
+}
+
+.resume-container .main-resume.download-active .right-section .resume-section .delete-section {
   display: none;
 }
 
@@ -124,19 +156,126 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   padding: 0.2rem;
 }
 
+.resume-container .main-resume .left-section .resume-section {
+  position: relative;
+}
+
+.resume-container .main-resume .left-section .resume-section .delete-section {
+  color: grey;
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0.2rem;
+  border: 0.1rem solid grey;
+  padding: 0.2rem;
+  border-radius: 0.7rem;
+}
+
+.resume-container .main-resume .left-section .resume-section .switch-to-table {
+  position: absolute;
+  color: grey;
+  top: 0;
+  right: 3rem;
+  font-size: 0.9rem;
+  border: 0.1rem solid grey;
+  border-radius: 0.7rem;
+  padding: 0 0.2rem;
+}
+
 .resume-container .main-resume .left-section .resume-section .resume-section-head {
   font-weight: 800;
   font-size: 1rem;
 }
 
+.resume-container .main-resume .left-section .resume-section .section-content.active-tab .education-table {
+  display: block;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content.active-tab .content-list {
+  display: none;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content.active-tab #add-edutab-btn {
+  display: block;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content.active-tab #add-edu-btn {
+  display: none;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content #add-edutab-btn {
+  display: none;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content #add-edu-btn {
+  display: block;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .education-table {
+  display: none;
+  width: 100%;
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .education-table tr th:first-child {
+  border-left: 0.1rem solid black;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .education-table tr td:first-child {
+  border-left: 0.05rem solid black;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .education-table tr th {
+  border-top: 0.1rem solid black;
+  border-right: 0.1rem solid black;
+  border-bottom: 0.1rem solid black;
+  padding: 0.2rem;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .education-table tr .tb-name {
+  width: 25%;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .education-table tr .tb-degree {
+  width: 25%;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .education-table tr .tb-grade {
+  width: 10%;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .education-table tr .tb-ach {
+  width: 25%;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .education-table tr .tb-year {
+  width: 10%;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .education-table tr .tb-del {
+  width: 5%;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .education-table tr td {
+  border-right: 0.05rem solid black;
+  border-bottom: 0.05rem solid black;
+  padding: 0.2rem;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .education-table tr td .delete-info {
+  color: grey;
+}
+
 .resume-container .main-resume .left-section .resume-section .section-content .content-list {
   padding: 0.3rem;
+  display: block;
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item {
   position: relative;
   margin: 0.3rem;
-  border-bottom: 0.1rem solid rgba(128, 128, 128, 0.795);
+  border-bottom: 0.1rem solid rgba(160, 160, 160, 0.411);
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .delete-info {
@@ -179,7 +318,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .content-item-desc-list .content-item-desc-item:not(:last-child) {
-  border-bottom: 0.1rem solid rgba(128, 128, 128, 0.199);
+  border-bottom: 0.1rem solid rgba(156, 156, 156, 0.062);
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .content-item-desc-list .content-item-desc-item {
@@ -198,14 +337,12 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   color: grey;
   top: 50%;
   font-size: 0.8rem;
+  border: none;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .add-more {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -220,7 +357,6 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   border: 0.1rem solid black;
   background-color: #d4d4d4;
   text-align: center;
-  margin-top: 0.5rem;
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .add-more:hover {
@@ -234,6 +370,18 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 
 .resume-container .main-resume .right-section .resume-section {
   margin: 1rem 0.2rem;
+  position: relative;
+}
+
+.resume-container .main-resume .right-section .resume-section .delete-section {
+  color: grey;
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0.2rem;
+  border: 0.1rem solid grey;
+  padding: 0.2rem;
+  border-radius: 0.7rem;
 }
 
 .resume-container .main-resume .right-section .resume-section .resume-sec-head {
@@ -244,17 +392,24 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 .resume-container .main-resume .right-section .resume-section .resume-skills-list {
   margin: 0.3rem;
   padding-left: 0.8rem;
+  list-style-type: none;
 }
 
 .resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item {
   position: relative;
   padding: 0.1rem;
-  border-bottom: 0.1rem solid rgba(128, 128, 128, 0.774);
+  border-bottom: 0.1rem solid rgba(158, 158, 158, 0.459);
   margin: 0.2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item .skill-head {
   font-weight: 600;
+  margin-right: 0.4rem;
 }
 
 .resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item .skill-text {
@@ -272,6 +427,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   color: grey;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  border: none;
 }
 
 .resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item .delete-info:hover {

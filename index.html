@@ -44,6 +44,7 @@
             <div class="left-section">
                 
                 <div class="resume-section">  
+                    <div class="delete-section fa fa-trash" onclick="deleteFromList(this)"></div>
                     <div class="resume-section-head">Work Experience:</div>
                     
                     <div class="section-content">
@@ -73,7 +74,7 @@
                 </div>
                 
                 <div class="resume-section">
-                    
+                    <div class="delete-section fa fa-trash" onclick="deleteFromList(this)"></div>
                     <div class="resume-section-head">Projects:</div>
                     
                     <div class="section-content">
@@ -83,6 +84,7 @@
                                 <div class="content-item-head" contenteditable="true">Project Name</div>
                                 
                                 <div class="brief-cont">
+
                                     <div class="content-item-duration"><span contenteditable="true">from</span> - <span contenteditable="true">to</span></div>
                                 </div>
                                 
@@ -102,15 +104,19 @@
                 </div>
 
                 <div class="resume-section">
+                    <div class="delete-section fa fa-trash" onclick="deleteFromList(this)"></div>
                     <div class="resume-section-head">Education:</div>
-                    
-                    <div class="section-content">
+                    <div class="switch-to-table" id='switch-to-table'><i class="fa fa-exchange"></i></div>
+
+                    <div class="section-content" id='edu-section-content'>
                         <ul class="content-list" id='edu-list'>
                             <li class="content-item">
                                 <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div>
-                                <div class="content-item-head" contenteditable="true">School Name</div>
+                                <div class="content-item-head" contenteditable="true">Institution Name</div>
                                 
                                 <div class="brief-cont">
+                                    <div class="content-item-role" contenteditable="true">Degree</div> 
+                                    <div class="content-item-role">Grade: <span contenteditable="true">CGPA/grade</span></div> 
                                     <div class="content-item-duration"><span contenteditable="true">from</span> - <span contenteditable="true">to</span></div>
                                 </div>
                                 
@@ -123,10 +129,39 @@
                             </li>
                             
                         </ul>
-                        
+
+                        <table class='education-table' id='education-table' cellspacing='0'>
+                            <tr>
+                                <th class='tb-name'>Institution Name</th>
+                                <th class='tb-degree'>Degree</th>
+                                <th class='tb-grade'>Grade</th>
+                                <th class='tb-ach'>Achivements</th>
+                                <th class='tb-year'>Year</th>
+                                <th class='tb-del'></th>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true">Name of institute</td>
+                                <td contenteditable="true">Degree or Course</td>
+                                <td contenteditable="true">CGPA/grade</td>
+                                <td contenteditable="true">Excellence award</td>
+                                <td><span contenteditable="true">from</span>-<span contenteditable="true">to</span></td>
+                                <td><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true">Name of institute</td>
+                                <td contenteditable="true">Degree or Course</td>
+                                <td contenteditable="true">CGPA/grade</td>
+                                <td contenteditable="true">Excellence award</td>
+                                <td><span contenteditable="true">from</span>-<span contenteditable="true">to</span></td>
+                                <td><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></td>
+                            </tr>
+                        </table>
+
+                        <div class="add-more" id='add-edutab-btn'>+</div>
                         <div class="add-more" id='add-edu-btn'>+</div>
 
                     </div>
+
                 </div>
 
 
@@ -136,7 +171,8 @@
             <div class="right-section">
                 
                 <div class="resume-section">
-                    <div class="resume-sec-head">Skills:</div>
+                    <div class="delete-section fa fa-trash" onclick="deleteFromList(this)"></div>
+                    <div class="resume-sec-head">Skills & Achievements:</div>
                     
                     <ul class="resume-skills-list" id='skill-list'>
                         <li class="skill-item"><div class="skill-text" contenteditable="true">Skill name</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
@@ -149,6 +185,7 @@
 
 
                 <div class="resume-section">
+                    <div class="delete-section fa fa-trash" onclick="deleteFromList(this)"></div>
                     <div class="resume-sec-head">Certifications:</div>
                     
                     <ul class="resume-skills-list" id='certi-list'>
@@ -167,7 +204,7 @@
                         <li class="skill-item"><div class="skill-head">Phone Number: </div><div class="skill-text" contenteditable="true">+91 1234567890</div></li>
                         <li class="skill-item"><div class="skill-head">Email: </div><div class="skill-text" contenteditable="true">abc@demo.com</div></li>
                         <li class="skill-item"><div class="skill-head">Address: </div><div class="skill-text" contenteditable="true">#123, xyz, India</div></li>
-                        <li class="skill-item"><div class="skill-head">Website: </div><div class="skill-text"><a href="#" class='contact-link' style='text-decoration: none; color: rgb(0, 119, 255);' id='user-website'>Visit</a> <input  id='user-web-link' placeholder="Your website link" type="text" style="max-width: 80%; display: block;"></div></li>
+                        <li class="skill-item"><div class="skill-head">Website: </div><div class="skill-text"><a href="#" class='contact-link' style='text-decoration: none; color: rgb(0, 119, 255);' id='user-website'>Visit</a> <input  id='user-web-link' placeholder="Your website link" type="text" style="max-width: 60%;"></div></li>
                     </ul>
                     
                 </div>

@@ -75,9 +75,27 @@ header{
     }
 
     .main-resume.download-active{
+        #user-web-link{
+            display: none;
+        }
         .left-section{
+
             .resume-section{
+                .delete-section{
+                    display: none;
+                }
+                .switch-to-table{
+                    display: none;
+                }
                 .section-content{
+                    .education-table{
+                        th:last-child{
+                            display: none;
+                        }
+                        td:last-child{
+                            display: none;
+                        }
+                    }
                     .content-list{
                         .content-item{
                             .delete-info{
@@ -96,12 +114,17 @@ header{
                     .add-more{
                         display: none;
                     }
+                    .add-more#add-edutab-btn{display: none;}
+                    .add-more#add-edu-btn{display: none;}
                 }
             }
         }
         .right-section{
             .resume-section{
                 #user-web-link{
+                    display: none;
+                }
+                .delete-section{
                     display: none;
                 }
                 .resume-skills-list{
@@ -122,7 +145,6 @@ header{
     .main-resume{
         display: flex;
         margin: 0.2rem;
-
         .left-section{
             width: 70%; 
             border-right: 0.1rem solid grey;
@@ -130,19 +152,100 @@ header{
 
 
             .resume-section{
+                position: relative;
+
+                .delete-section{
+                    color: grey;
+                    font-size: 1rem;
+                    position: absolute;
+                    top: 0;
+                    right: 0.2rem;
+                    border: 0.1rem solid grey;
+                    padding: 0.2rem;
+                    border-radius: 0.7rem;
+                }
+
+                .switch-to-table{
+                    position: absolute;
+                    color: grey;
+                    top: 0;
+                    right: 3rem;
+                    font-size: 0.9rem;
+                    border: 0.1rem solid grey;
+                    border-radius: 0.7rem;
+                    padding: 0 0.2rem;
+                }
+
                 .resume-section-head{
                     font-weight: 800;
                     font-size: 1rem;
                 }
+
+                .section-content.active-tab{
+                    .education-table{
+                        display: block;
+                    }
+
+                    .content-list{
+                        display: none;
+                    }
+                    
+                    #add-edutab-btn{display: block;}
+                    #add-edu-btn{display: none;}
+                }
+
                 .section-content{
+
+                    #add-edutab-btn{display: none;}
+                    #add-edu-btn{display: block;}
+
+                    .education-table{
+                        display: none;
+                        width: 100%;
+                        margin-top: 0.4rem;
+                        text-align: center;
+
+                        tr{
+                            th:first-child{
+                                border-left: 0.1rem solid black;
+                            }
+                            td:first-child{
+                                border-left: 0.05rem solid black;
+                            }
+                            th{
+                                border-top: 0.1rem solid black;
+                                border-right: 0.1rem solid black;
+                                border-bottom: 0.1rem solid black;
+                                padding: 0.2rem;
+                            }
+
+                            .tb-name{ width: 25%;}
+                            .tb-degree{ width: 25%; }
+                            .tb-grade{ width: 10%;}
+                            .tb-ach{ width: 25%;}
+                            .tb-year{ width: 10%;}
+                            .tb-del{ width: 5%;}
+
+                            td{
+                                border-right: 0.05rem solid black;
+                                border-bottom: 0.05rem solid black;
+                                padding: 0.2rem;
+
+                                .delete-info{
+                                    color: grey;
+                                }
+                            }
+                        }
+                    }
 
                     .content-list{
                         padding: 0.3rem;
+                        display: block;
 
                         .content-item{
                             position: relative;
                             margin: 0.3rem;
-                            border-bottom: 0.1rem solid rgba(128, 128, 128, 0.795);
+                            border-bottom: 0.1rem solid rgba(160, 160, 160, 0.411);
 
                             .delete-info{
                                 position: absolute;
@@ -179,7 +282,7 @@ header{
                                 padding: 0.1rem;
 
                                 .content-item-desc-item:not(:last-child){
-                                    border-bottom: 0.1rem solid rgba(128, 128, 128, 0.199);
+                                    border-bottom: 0.1rem solid rgba(156, 156, 156, 0.062);
                                 }
 
                                 .content-item-desc-item{
@@ -196,6 +299,7 @@ header{
                                         color: grey;
                                         top: 50%;
                                         font-size: 0.8rem;
+                                        border: none;
                                         transform: translateY(-50%);
                                     }
                                 }
@@ -203,7 +307,6 @@ header{
                         }  
                     }
                     .add-more{
-                        display: flex;
                         align-items: center;
                         justify-content: center;
                         border-radius: 1rem;
@@ -214,7 +317,6 @@ header{
                         border: 0.1rem solid black;
                         background-color: rgb(212, 212, 212);
                         text-align: center;
-                        margin-top: 0.5rem;
                     }
                     .add-more:hover{
                         cursor: pointer;
@@ -228,6 +330,18 @@ header{
 
             .resume-section{
                 margin: 1rem 0.2rem;
+                position: relative;
+
+                .delete-section{
+                    color: grey;
+                    font-size: 1rem;
+                    position: absolute;
+                    top: 0;
+                    right: 0.2rem;
+                    border: 0.1rem solid grey;
+                    padding: 0.2rem;
+                    border-radius: 0.7rem;
+                }
 
                 .resume-sec-head{
                     font-weight: 800;
@@ -237,14 +351,19 @@ header{
                 .resume-skills-list{
                     margin: 0.3rem;
                     padding-left: 0.8rem;
+                    list-style-type: none;
+
                     .skill-item{
                         position: relative;
                         padding: 0.1rem;
-                        border-bottom: 0.1rem solid rgba(128, 128, 128, 0.774);
+                        border-bottom: 0.1rem solid rgba(158, 158, 158, 0.459);
                         margin: 0.2rem 0;
+                        display: flex;
+                        flex-wrap: wrap;
 
                         .skill-head{
                             font-weight: 600;
+                            margin-right: 0.4rem;
                         }
                         .skill-text{
                             font-size: 0.7rem;
@@ -259,6 +378,7 @@ header{
                             top: 50%;
                             color: grey;
                             transform: translateY(-50%);
+                            border: none;
                         }
                         .delete-info:hover{
                             cursor: pointer;
