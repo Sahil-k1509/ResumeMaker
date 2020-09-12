@@ -50,7 +50,7 @@ $(document).ready(function(){
 
 
     $('#add-certificate-btn').click(function(){
-        document.getElementById('certi-list').innerHTML += '<li class="skill-item"><div class="skill-text" contenteditable="true">Certificate name</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>';
+        document.getElementById('certi-list').innerHTML += '<li class="skill-item"><div class="skill-text" contenteditable="true">Certificate/Achievement</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>';
     });
 
 
@@ -129,5 +129,48 @@ $(document).ready(function(){
         $('#user-website').attr('href',this.value);
     });
     
+    const dragcont = document.querySelectorAll('.left-section');
+    const draggables = document.querySelectorAll('.draggable');
+
+    draggables.forEach(draggable => {
+        draggable.addEventListener('dragstart', ()=>{
+            draggable.classList.add('dragging');
+            console.log("Drag start");
+        });
+
+        draggable.addEventListener('dragend', ()=>{
+            draggable.classList.remove('dragging');
+            console.log("Drag End");
+        });
+    });
+
+    dragcont.forEach(container => {
+        container.addEventListener('dragover', e => {
+            e.preventDefault();
+            const afterElem = getdragAfter(container, e.clientY);
+            const draggable = document.querySelector('.dragging');
+            console.log(afterElem);
+            if (afterElem == null){
+                container.appendChild(draggable);
+            } else {
+                container.insertBefore(draggable, afterElem);
+            }
+
+        });
+    });
+
+    function getdragAfter(container, y){
+        const draggableElems = [...container.querySelectorAll('.draggable:not(.dragging)')];
+        
+        return draggableElems.reduce((closest, child) => {
+            const box = child.getBoundingClientRect();
+            const offset = y - box.top - box.height/4;
+            if (offset < 0 && offset > closest.offset){
+                return {offset: offset, element: child};
+            } else {
+                return closest;
+            }
+        }, {offset: Number.NEGATIVE_INFINITY}).element;
+    }
 });
 

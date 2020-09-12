@@ -156,6 +156,11 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   padding: 0.2rem;
 }
 
+.resume-container .main-resume .left-section .resume-section.dragging {
+  opacity: 0.5;
+  background-color: silver;
+}
+
 .resume-container .main-resume .left-section .resume-section {
   position: relative;
 }
@@ -169,6 +174,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   border: 0.1rem solid grey;
   padding: 0.2rem;
   border-radius: 0.7rem;
+  cursor: pointer;
 }
 
 .resume-container .main-resume .left-section .resume-section .switch-to-table {
@@ -382,6 +388,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   border: 0.1rem solid grey;
   padding: 0.2rem;
   border-radius: 0.7rem;
+  cursor: pointer;
 }
 
 .resume-container .main-resume .right-section .resume-section .resume-sec-head {

@@ -52,6 +52,7 @@ header{
     }
 }
 
+
 .resume-container{
     padding: 0.2rem;
     color: black;
@@ -150,6 +151,10 @@ header{
             border-right: 0.1rem solid grey;
             padding: 0.2rem;
 
+            .resume-section.dragging{
+                opacity: 0.5;
+                background-color: rgb(192, 192, 192);
+            }
 
             .resume-section{
                 position: relative;
@@ -163,6 +168,7 @@ header{
                     border: 0.1rem solid grey;
                     padding: 0.2rem;
                     border-radius: 0.7rem;
+                    cursor: pointer;
                 }
 
                 .switch-to-table{
@@ -341,6 +347,7 @@ header{
                     border: 0.1rem solid grey;
                     padding: 0.2rem;
                     border-radius: 0.7rem;
+                    cursor: pointer;
                 }
 
                 .resume-sec-head{
