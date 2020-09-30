@@ -11,15 +11,95 @@
 }
 
 body{
-    font-size: 62.5%;
+    height: 100vh;
+    overflow: hidden;
     margin: 0.3rem;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     background-color: rgb(51, 51, 51);
     color: rgb(235, 235, 235);
     font-family: 'Noto Serif JP', serif;
+
+    .container-main-page{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .container-main-page::-webkit-scrollbar{
+        display: none;
+    }
 }
+
+body.active-info{
+    overflow: hidden;
+    #layoff{ 
+        visibility: visible; opacity: 1;
+    }
+    #instructions{ 
+        visibility: visible; opacity: 1;
+        width: 70%;
+        min-width: 25rem;
+        max-width: 50rem;
+        height: max-content;    
+    }
+}
+
+#layoff{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    background-color: rgba(0, 0, 0, 0.589);
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.5s;
+    width: 100%;
+    height: 100%;
+}
+
+#instructions{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0.1rem solid black;
+    z-index: 999;
+    border-radius: 0.5rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.5s;
+    width: 0;
+    height: 0;
+    overflow-y: auto;
+
+    .content-ins{
+        h2{ text-align: center; }
+
+        ul{
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            
+            li{
+                text-align: justify;
+                font-weight: 600;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+
+    #close-info-btn{
+        cursor: pointer;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        font-size: 1.2rem;
+        font-weight: 900;
+    }
+}
+
 
 header{
     padding: 1rem;
@@ -184,7 +264,7 @@ header{
 
                 .resume-section-head{
                     font-weight: 800;
-                    font-size: 1rem;
+                    font-size: 1.1rem;
                 }
 
                 .section-content.active-tab{
@@ -210,6 +290,7 @@ header{
                         width: 100%;
                         margin-top: 0.4rem;
                         text-align: center;
+                        font-size: 0.7rem;
 
                         tr{
                             th:first-child{
@@ -292,7 +373,7 @@ header{
                                 }
 
                                 .content-item-desc-item{
-                                    padding: 0.2rem;
+                                    padding-left: 0.2rem;
                                     position: relative;
                                     list-style-type: "--";
 
@@ -352,7 +433,7 @@ header{
 
                 .resume-sec-head{
                     font-weight: 800;
-                    font-size: 1rem;
+                    font-size: 1.1rem;
                 }
 
                 .resume-skills-list{
@@ -371,6 +452,7 @@ header{
                         .skill-head{
                             font-weight: 600;
                             margin-right: 0.4rem;
+                            font-size: 0.7rem;
                         }
                         .skill-text{
                             font-size: 0.7rem;

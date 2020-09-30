@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    // $(this).scrollTop(0);
 
     var tableActive = false;
 
@@ -10,6 +11,18 @@ $(document).ready(function(){
             tableActive = true;
             $('#edu-section-content').addClass('active-tab');
         }
+    });
+
+    $('#info-show-btn').click(function(){
+        $('body').addClass('active-info');
+    });
+
+    $('#layoff').click(function(){
+        $('body').removeClass('active-info');
+    });
+
+    $('#close-info-btn').click(function(){
+        $('body').removeClass('active-info');
     });
 
 
@@ -89,7 +102,7 @@ $(document).ready(function(){
                                                                     </div>
                                                                     
                                                                     <ul class="content-item-desc-list">
-                                                                        <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Project Description</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                                                                        <li class="content-item-desc-item"><div class='content-desc-text' ><b>Skills Used:</b> <span contenteditable="true">XYZ, ABC, ...</span></div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
                                                                         <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Project Description</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
                                                                         <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Project Description</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
                                                                         <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Project Description</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>

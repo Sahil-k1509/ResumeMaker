@@ -17,14 +17,103 @@
 }
 
 body {
-  font-size: 62.5%;
+  height: 100vh;
+  overflow: hidden;
   margin: 0.3rem;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   background-color: #333333;
   color: #ebebeb;
   font-family: 'Noto Serif JP', serif;
+}
+
+body .container-main-page {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body .container-main-page::-webkit-scrollbar {
+  display: none;
+}
+
+body.active-info {
+  overflow: hidden;
+}
+
+body.active-info #layoff {
+  visibility: visible;
+  opacity: 1;
+}
+
+body.active-info #instructions {
+  visibility: visible;
+  opacity: 1;
+  width: 70%;
+  min-width: 25rem;
+  max-width: 50rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+#layoff {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  background-color: rgba(0, 0, 0, 0.589);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  width: 100%;
+  height: 100%;
+}
+
+#instructions {
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 0.1rem solid black;
+  z-index: 999;
+  border-radius: 0.5rem;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  width: 0;
+  height: 0;
+  overflow-y: auto;
+}
+
+#instructions .content-ins h2 {
+  text-align: center;
+}
+
+#instructions .content-ins ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+#instructions .content-ins ul li {
+  text-align: justify;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+#instructions #close-info-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 900;
 }
 
 header {
@@ -190,7 +279,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 
 .resume-container .main-resume .left-section .resume-section .resume-section-head {
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content.active-tab .education-table {
@@ -222,6 +311,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   width: 100%;
   margin-top: 0.4rem;
   text-align: center;
+  font-size: 0.7rem;
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .education-table tr th:first-child {
@@ -328,7 +418,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .content-item-desc-list .content-item-desc-item {
-  padding: 0.2rem;
+  padding-left: 0.2rem;
   position: relative;
   list-style-type: "--";
 }
@@ -393,7 +483,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 
 .resume-container .main-resume .right-section .resume-section .resume-sec-head {
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .resume-container .main-resume .right-section .resume-section .resume-skills-list {
@@ -417,6 +507,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 .resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item .skill-head {
   font-weight: 600;
   margin-right: 0.4rem;
+  font-size: 0.7rem;
 }
 
 .resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item .skill-text {
