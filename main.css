@@ -28,6 +28,7 @@ body {
 
 body .container-main-page {
   width: 80%;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -48,12 +49,6 @@ body.active-info #layoff {
 body.active-info #instructions {
   visibility: visible;
   opacity: 1;
-  width: 70%;
-  min-width: 25rem;
-  max-width: 50rem;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
 }
 
 #layoff {
@@ -86,8 +81,12 @@ body.active-info #instructions {
   opacity: 0;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  width: 0;
-  height: 0;
+  width: 70%;
+  min-width: 25rem;
+  max-width: 50rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   overflow-y: auto;
 }
 
@@ -161,19 +160,48 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 
 .resume-container .resume-head {
   border-bottom: 0.1rem solid grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.resume-container .resume-head .name {
-  padding: 0.2rem;
+.resume-container .resume-head .intro-section {
+  width: 70%;
+}
+
+.resume-container .resume-head .intro-section .name {
   font-size: 1.5rem;
   font-weight: 800;
 }
 
-.resume-container .resume-head .about {
+.resume-container .resume-head .intro-section .post {
+  font-size: 0.9rem;
+}
+
+.resume-container .resume-head .intro-section .about {
   padding: 0.2rem;
   font-size: 0.7rem;
   color: grey;
   margin-bottom: 0.3rem;
+}
+
+.resume-container .resume-head .contact-section {
+  width: 30%;
+}
+
+.resume-container .resume-head .contact-section .skill-text {
+  font-size: 0.7rem;
+  text-align: right;
+  margin: 0.1rem;
+  color: #555555;
+}
+
+.resume-container .resume-head .contact-section .skill-text .skill-link:hover {
+  cursor: pointer;
+}
+
+.resume-container .resume-head .contact-section.download-active #user-web-link {
+  display: none;
 }
 
 .resume-container .main-resume.download-active #user-web-link {
@@ -213,10 +241,6 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 }
 
 .resume-container .main-resume.download-active .left-section .resume-section .section-content .add-more#add-edu-btn {
-  display: none;
-}
-
-.resume-container .main-resume.download-active .right-section .resume-section #user-web-link {
   display: none;
 }
 

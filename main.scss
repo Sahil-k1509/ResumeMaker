@@ -21,6 +21,7 @@ body{
 
     .container-main-page{
         width: 80%;
+        max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -35,11 +36,7 @@ body.active-info{
         visibility: visible; opacity: 1;
     }
     #instructions{ 
-        visibility: visible; opacity: 1;
-        width: 70%;
-        min-width: 25rem;
-        max-width: 50rem;
-        height: max-content;    
+        visibility: visible; opacity: 1;    
     }
 }
 
@@ -70,8 +67,10 @@ body.active-info{
     visibility: hidden;
     opacity: 0;
     transition: all ease 0.5s;
-    width: 0;
-    height: 0;
+    width: 70%;
+    min-width: 25rem;
+    max-width: 50rem;
+    height: max-content;
     overflow-y: auto;
 
     .content-ins{
@@ -140,18 +139,46 @@ header{
     
     .resume-head{
         border-bottom: 0.1rem solid grey;
+        display: flex;
 
-        .name{
-            padding: 0.2rem;
-            font-size: 1.5rem;
-            font-weight: 800;
+        .intro-section{
+            width: 70%;
+
+            .name{
+                font-size: 1.5rem;
+                font-weight: 800;
+            }
+
+            .post{
+                font-size: 0.9rem;
+            }
+
+            .about{
+                padding: 0.2rem;
+                font-size: 0.7rem;
+                color: grey;
+                margin-bottom: 0.3rem;
+            }
         }
 
-        .about{
-            padding: 0.2rem;
-            font-size: 0.7rem;
-            color: grey;
-            margin-bottom: 0.3rem;
+        .contact-section{
+            width: 30%;
+
+            .skill-text{
+                font-size: 0.7rem;
+                text-align: right;
+                margin: 0.1rem;
+                color: rgb(85, 85, 85);
+                .skill-link:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        
+        .contact-section.download-active{
+            #user-web-link{
+                display: none;
+            }
         }
     }
 
@@ -202,9 +229,6 @@ header{
         }
         .right-section{
             .resume-section{
-                #user-web-link{
-                    display: none;
-                }
                 .delete-section{
                     display: none;
                 }
