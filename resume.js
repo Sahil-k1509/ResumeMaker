@@ -39,15 +39,18 @@ $(document).ready(function(){
         };
         
         $("#main-resume").addClass('download-active');
+        $("#contact-section").addClass('download-active');
         html2pdf().from(invoice).set(opt).save();
     });
 
     $('#edit-btn').click(function(){
         $('#main-resume').removeClass('download-active');
+        $('#contact-section').removeClass('download-active');
     });
 
     $('#preview-btn').click(function(){
         $('#main-resume').addClass('download-active');
+        $('#contact-section').addClass('download-active');
     });
 
     $('#add-edutab-btn').click(function(){
@@ -57,7 +60,7 @@ $(document).ready(function(){
                                                                     <td contenteditable='true'>CGPA/grade</td>
                                                                     <td contenteditable='true'>Excellence award</td>
                                                                     <td><span contenteditable="true">from</span>-<span contenteditable="true">to</span></td>
-                                                                    <td><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></td>
+                                                                    <td><div class="delete-info fa fa-trash" onclick="deleteFromList(this.parentNode)"></div></td>
                                                                 </tr>`;
     });
 

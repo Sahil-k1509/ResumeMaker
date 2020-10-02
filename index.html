@@ -63,8 +63,18 @@
         <div class='resume-container' id="resume">
 
             <div class="resume-head">
-                <div class='name' contenteditable="true">Your Name</div>
-                <div class="about" contenteditable="true">Write Something About Yourself in brief</div>
+                <div class="intro-section">
+                    <div class='name' contenteditable="true">Your Name</div>
+                    <div class='post'>(Describe your work)</div>
+                    <div class="about" contenteditable="true">Write Something About Yourself in brief</div>
+                </div>
+
+                <div class="contact-section" id='contact-section'>
+                    <div class="skill-text"><a href="#" class='contact-link' style='text-decoration: none; color: rgb(0, 119, 255);' id='user-website'>Visit Website</a> <input  id='user-web-link' placeholder="Your website link" type="text" style="max-width: 60%;"></div>                    
+                    <div class="skill-text" contenteditable="true">abc@demo.com</div>
+                    <div class="skill-text" contenteditable="true">+91 1234567890</div>
+                    <div class="skill-text" contenteditable="true">#123, xyz, India</div>
+                </div>
             </div>
 
             <div class="main-resume" id='main-resume'>
@@ -173,7 +183,7 @@
                                     <td contenteditable="true">CGPA/grade</td>
                                     <td contenteditable="true">Excellence award</td>
                                     <td><span contenteditable="true">from</span>-<span contenteditable="true">to</span></td>
-                                    <td><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></td>
+                                    <td><div class="delete-info fa fa-trash" onclick="deleteFromList(this.parentNode)"></div></td>
                                 </tr>
                                 <tr>
                                     <td contenteditable="true">Name of institute</td>
@@ -181,7 +191,7 @@
                                     <td contenteditable="true">CGPA/grade</td>
                                     <td contenteditable="true">Excellence award</td>
                                     <td><span contenteditable="true">from</span>-<span contenteditable="true">to</span></td>
-                                    <td><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></td>
+                                    <td><div class="delete-info fa fa-trash" onclick="deleteFromList(this.parentNode)"></div></td>
                                 </tr>
                             </table>
 
@@ -224,19 +234,6 @@
                         
                         <div class="add-more" id='add-certificate-btn'>+</div>
                     </div>
-
-                    <div class="resume-section">
-                        <div class="resume-sec-head">Contact:</div>
-                        
-                        <ul class="resume-skills-list">
-                            <li class="skill-item"><div class="skill-head">Phone Number: </div><div class="skill-text" contenteditable="true">+91 1234567890</div></li>
-                            <li class="skill-item"><div class="skill-head">Email: </div><div class="skill-text" contenteditable="true">abc@demo.com</div></li>
-                            <li class="skill-item"><div class="skill-head">Address: </div><div class="skill-text" contenteditable="true">#123, xyz, India</div></li>
-                            <li class="skill-item"><div class="skill-head">Website: </div><div class="skill-text"><a href="#" class='contact-link' style='text-decoration: none; color: rgb(0, 119, 255);' id='user-website'>Visit</a> <input  id='user-web-link' placeholder="Your website link" type="text" style="max-width: 60%;"></div></li>
-                        </ul>
-                        
-                    </div>
-
 
                 </div>
 
