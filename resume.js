@@ -1,4 +1,9 @@
 $(document).ready(function(){
+    setTimeout(function(){ 
+        $('body').removeClass('loading');
+        $('body').addClass('loaded');
+    }, 5000);
+
     // $(this).scrollTop(0);
 
     var tableActive = false;
@@ -66,12 +71,12 @@ $(document).ready(function(){
 
 
     $('#add-certificate-btn').click(function(){
-        document.getElementById('certi-list').innerHTML += '<li class="skill-item"><div class="skill-text" contenteditable="true">Certificate/Achievement</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>';
+        document.getElementById('certi-list').innerHTML += '<li class="skill-item"><div class="skill-text" contenteditable="true">Certificate</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>';
     });
 
 
     $('#add-skill-btn').click(function(){
-        document.getElementById('skill-list').innerHTML += '<li class="skill-item"><div class="skill-text" contenteditable="true">Skill name</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>';
+        document.getElementById('skill-list').innerHTML += '<div class="skill-block"><div class="skill-text" contenteditable="true">Skill</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></div>';
     });
 
 
@@ -101,7 +106,8 @@ $(document).ready(function(){
                                                                     <div class="content-item-head" contenteditable="true">Project Name</div>
                                                                     
                                                                     <div class="brief-cont">
-                                                                        <div class="content-item-duration"><span contenteditable="true">from</span> - <span contenteditable="true">to</span></div>
+                                                                        <a target='_blank' class="content-item-link">visit project</a>
+                                                                        <input type="text" class="link-input" placeholder="Enter url" onkeyup="setlinkUrl(this)">
                                                                     </div>
                                                                     
                                                                     <ul class="content-item-desc-list">
@@ -126,24 +132,25 @@ $(document).ready(function(){
                                                                 </div>
 
                                                                 <ul class="content-item-desc-list">
-                                                                    <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Notable Achievements</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
-                                                                    <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Notable Achievements</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
-                                                                    <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Notable Achievements</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
-                                                                    <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Notable Achievements</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                                                                    <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Keypoints</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                                                                    <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Keypoints</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                                                                    <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Keypoints</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                                                                    <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Keypoints</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
                                                                 </ul>
                                                             </li>`;
     });
 
 
-    let deleteFromList = ()=>{
+    let deleteFromList = () => {
         console.log('delete Check')
         this.parentNode.parentNode.removeChild(this.parentNode);
     };
 
 
     $('#user-web-link').keyup(function(){
-        $('#user-website').attr('href',this.value);
+        $('#user-website').attr('href', this.value);
     });
+
     
     const dragcont = document.querySelectorAll('.left-section');
     const draggables = document.querySelectorAll('.draggable');

@@ -25,10 +25,25 @@
             console.log('delete Check')
             elem.parentNode.parentNode.removeChild(elem.parentNode);
         };
+
+        let setlinkUrl = (elem) => {
+            // alert('change');
+            console.log(elem.value)
+            console.log(elem.parentNode)
+            console.log(elem.parentNode.children)
+            elem.parentNode.children[0].setAttribute('href', elem.value);
+        };
     </script>
 </head>
-<body class='active-info'>
-    
+<body>
+    <!-- class='active-info loading' -->
+
+    <div class='preloader'>
+        <div class='load-line line-1'></div>
+        <div class='load-line line-2'></div>
+        <div class='load-line line-3'></div>
+        <div class='load-line line-4'></div>
+    </div>
    
     <div class="layoff" id="layoff"></div>
     <div class="instructions" id="instructions">
@@ -42,6 +57,7 @@
                 <li>This is a template resume. You can edit the content and download the resume in pdf format.</li>
                 <li>The sections on left side are reorderable. Drag and drop to change position.</li>
                 <li>Education section has switch button that switches to tabular format if you prefer it.</li>
+                <li>Certificate Tab's heading can be changed if you would like to add any other thing to add instead.</li>
                 <li>Enter the url for your website(github/portfolio) in the input box and the link will redirect you to that link even in pdf format.</li>
             </ul>
         </div>
@@ -65,12 +81,12 @@
             <div class="resume-head">
                 <div class="intro-section">
                     <div class='name' contenteditable="true">Your Name</div>
-                    <div class='post'>(Describe your work)</div>
+                    <div class='post' contenteditable="true">(Describe your profile)</div>
                     <div class="about" contenteditable="true">Write Something About Yourself in brief</div>
                 </div>
 
                 <div class="contact-section" id='contact-section'>
-                    <div class="skill-text"><a href="#" class='contact-link' style='text-decoration: none; color: rgb(0, 119, 255);' id='user-website'>Visit Website</a> <input  id='user-web-link' placeholder="Your website link" type="text" style="max-width: 60%;"></div>                    
+                    <div class="skill-text"><a href="#" class='contact-link' style='text-decoration: none; color: rgb(0, 153, 255);' id='user-website'>Visit Website</a> <input  id='user-web-link' placeholder="Your website link" type="text" style="max-width: 60%;"></div>                    
                     <div class="skill-text" contenteditable="true">abc@demo.com</div>
                     <div class="skill-text" contenteditable="true">+91 1234567890</div>
                     <div class="skill-text" contenteditable="true">#123, xyz, India</div>
@@ -98,10 +114,10 @@
                                     </div>
 
                                     <ul class="content-item-desc-list">
-                                        <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Notable Achievements</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
-                                        <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Notable Achievements</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
-                                        <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Notable Achievements</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
-                                        <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Notable Achievements</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                                        <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Key Points</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                                        <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Key Points</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                                        <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Key Points</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                                        <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Key Points</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -122,8 +138,8 @@
                                     <div class="content-item-head" contenteditable="true">Project Name</div>
                                     
                                     <div class="brief-cont">
-
-                                        <div class="content-item-duration"><span contenteditable="true">from</span> - <span contenteditable="true">to</span></div>
+                                        <a target='_blank' class="content-item-link">visit project</a>
+                                        <input type="text" class="link-input" placeholder="Enter url" onkeyup="setlinkUrl(this)">
                                     </div>
                                     
                                     <ul class="content-item-desc-list">
@@ -212,11 +228,11 @@
                         <div class="delete-section fa fa-trash" onclick="deleteFromList(this)"></div>
                         <div class="resume-sec-head">Skills:</div>
                         
-                        <ul class="resume-skills-list" id='skill-list'>
-                            <li class="skill-item"><div class="skill-text" contenteditable="true">Skill name</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
-                            <li class="skill-item"><div class="skill-text" contenteditable="true">Skill name</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
-                            <li class="skill-item"><div class="skill-text" contenteditable="true">Skill name</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
-                        </ul>
+                        <div class="resume-skill-wrap" id='skill-list'>
+                            <div class="skill-block"><div class="skill-text" contenteditable="true">Skill</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></div>
+                            <div class="skill-block"><div class="skill-text" contenteditable="true">Skill</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></div>
+                            <div class="skill-block"><div class="skill-text" contenteditable="true">Skill</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></div>
+                        </div>
                         
                         <div class="add-more" id='add-skill-btn'>+</div>
                     </div>
@@ -227,9 +243,9 @@
                         <div class="resume-sec-head" contenteditable="true">Certifications:</div>
                         
                         <ul class="resume-skills-list" id='certi-list'>
-                            <li class="skill-item"><div class="skill-text" contenteditable="true">Add Ceritficates or change the heading if you have more impressive things to share.</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
-                            <li class="skill-item"><div class="skill-text" contenteditable="true">Certificate/Achievement</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
-                            <li class="skill-item"><div class="skill-text" contenteditable="true">Certificate/Achievement</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                            <li class="skill-item"><div class="skill-text" contenteditable="true">Add Ceritficates or change the heading.</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                            <li class="skill-item"><div class="skill-text" contenteditable="true">Certificate</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                            <li class="skill-item"><div class="skill-text" contenteditable="true">Certificate</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
                         </ul>
                         
                         <div class="add-more" id='add-certificate-btn'>+</div>
