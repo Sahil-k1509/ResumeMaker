@@ -44,7 +44,7 @@ body .container-main-page::-webkit-scrollbar {
 
 body.loading .preloader {
   width: 100%;
-  height: 100%;
+  height: 110%;
   position: absolute;
   top: 0;
   left: 0;
@@ -157,7 +157,7 @@ body.active-info #instructions {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   width: 100%;
-  height: 100%;
+  height: 110%;
 }
 
 #instructions {
@@ -258,6 +258,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 3rem;
 }
 
 .resume-container .resume-head .intro-section {
@@ -367,9 +368,10 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 }
 
 .resume-container .main-resume .left-section {
-  width: 70%;
+  width: 66%;
   border-right: 0.1rem solid grey;
   padding: 0.2rem;
+  padding-left: 3rem;
 }
 
 .resume-container .main-resume .left-section .resume-section.dragging {
@@ -611,7 +613,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 }
 
 .resume-container .main-resume .right-section {
-  width: 30%;
+  width: 34%;
   padding: 0.2rem;
 }
 
@@ -633,8 +635,10 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 }
 
 .resume-container .main-resume .right-section .resume-section .resume-sec-head {
+  color: rgba(0, 115, 168, 0.822);
+  text-shadow: 0 0.05rem 0.05rem black;
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .resume-container .main-resume .right-section .resume-section .resume-skills-list {

@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Build With Us</title>
+    <link rel="shortcut icon" href="./icon.png" type="image/png">
+    
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
@@ -35,7 +37,7 @@
         };
     </script>
 </head>
-<body class='active-info loading' >
+<body class='active-info loading'>
 
     <div class='preloader'>
         <div class='load-line line-1'></div>
@@ -53,11 +55,11 @@
             <ul>
                 <li>Even though all sections have 4 points initially, please try to fit the information in only 1-2 points. Remember, A short and on point resume is better than long resume.</li>
                 <li>In any case, try not to exceed one page. A longer resume is most likely to get rejected as recruiters won't have time to go through all of it. Keep it short and reserve details for interview.</li>
-                <li>This is a template resume. You can edit the content and download the resume in pdf format.</li>
+                <li>You can edit the content and download the resume in pdf format.</li>
                 <li>The sections on left side are reorderable. Drag and drop to change position.</li>
                 <li>Education section has switch button that switches to tabular format if you prefer it.</li>
-                <li>Certificate Tab's heading can be changed if you would like to add any other thing to add instead.</li>
-                <li>Enter the url for your website(github/portfolio) in the input box and the link will redirect you to that link even in pdf format.</li>
+                <li>Right section Tab's headings can be changed in case you would like to add any other thing instead.</li>
+                <li>Enter the url in the input box and the link will redirect you to that link.</li>
             </ul>
         </div>
     </div>
@@ -242,12 +244,40 @@
                         <div class="resume-sec-head" contenteditable="true">Certifications:</div>
                         
                         <ul class="resume-skills-list" id='certi-list'>
-                            <li class="skill-item"><div class="skill-text" contenteditable="true">Add Ceritficates or change the heading.</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                            <li class="skill-item"><div class="skill-text" contenteditable="true">Ceritficates</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
                             <li class="skill-item"><div class="skill-text" contenteditable="true">Certificate</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
                             <li class="skill-item"><div class="skill-text" contenteditable="true">Certificate</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
                         </ul>
                         
                         <div class="add-more" id='add-certificate-btn'>+</div>
+                    </div>
+
+
+                    <div class="resume-section">
+                        <div class="delete-section fa fa-trash" onclick="deleteFromList(this)"></div>
+                        <div class="resume-sec-head" contenteditable="true">Publications:</div>
+                        
+                        <ul class="resume-skills-list" id='publi-list'>
+                            <li class="skill-item"><div class="skill-text" contenteditable="true">Add Publication</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                            <li class="skill-item"><div class="skill-text" contenteditable="true">Add Publication</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                            <li class="skill-item"><div class="skill-text" contenteditable="true">Add Publication</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                        </ul>
+                        
+                        <div class="add-more" id='add-publi-btn'>+</div>
+                    </div>
+
+
+                    <div class="resume-section">
+                        <div class="delete-section fa fa-trash" onclick="deleteFromList(this)"></div>
+                        <div class="resume-sec-head" contenteditable="true">Volunteer Experience:</div>
+                        
+                        <ul class="resume-skills-list" id='vol-list'>
+                            <li class="skill-item"><div class="skill-text" contenteditable="true">Org and work</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                            <li class="skill-item"><div class="skill-text" contenteditable="true">Org and work</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                            <li class="skill-item"><div class="skill-text" contenteditable="true">Org and work</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                        </ul>
+                        
+                        <div class="add-more" id='add-vol-btn'>+</div>
                     </div>
 
                 </div>

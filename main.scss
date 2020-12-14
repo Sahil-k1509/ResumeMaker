@@ -39,7 +39,7 @@ body.loading{
 
     .preloader{
         width: 100%;
-        height: 100%;
+        height: 110%;
         position: absolute;
         top: 0;
         left: 0;
@@ -118,7 +118,7 @@ body.active-info{
     opacity: 0;
     transition: all ease 0.5s;
     width: 100%;
-    height: 100%;
+    height: 110%;
 }
 
 #instructions{
@@ -208,6 +208,7 @@ header{
     .resume-head{
         border-bottom: 0.1rem solid grey;
         display: flex;
+        padding-left: 3rem;
 
         .intro-section{
             width: 70%;
@@ -254,7 +255,7 @@ header{
         #user-web-link{
             display: none;
         }
-        .left-section{
+        .left-section{    
 
             .resume-section{
                 .delete-section{
@@ -331,9 +332,10 @@ header{
         display: flex;
         margin: 0.2rem;
         .left-section{
-            width: 70%; 
+            width: 66%; 
             border-right: 0.1rem solid grey;
             padding: 0.2rem;
+            padding-left: 3rem;
 
             .resume-section.dragging{
                 opacity: 0.5;
@@ -538,7 +540,7 @@ header{
             }
         }
         .right-section{
-            width: 30%;
+            width: 34%;
             padding: 0.2rem;
 
             .resume-section{
@@ -558,8 +560,10 @@ header{
                 }
 
                 .resume-sec-head{
+                    color: rgba(0, 115, 168, 0.822);
+                    text-shadow: 0 0.05rem 0.05rem black;
                     font-weight: 800;
-                    font-size: 1.1rem;
+                    font-size: 1rem;
                 }
 
                 .resume-skills-list{

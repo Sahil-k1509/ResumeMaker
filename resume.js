@@ -75,6 +75,16 @@ $(document).ready(function(){
     });
 
 
+    $('#add-publi-btn').click(function(){
+        document.getElementById('publi-list').innerHTML += '<li class="skill-item"><div class="skill-text" contenteditable="true">Add Publication</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>';
+    });
+
+
+    $('#add-vol-btn').click(function(){
+        document.getElementById('vol-list').innerHTML += '<li class="skill-item"><div class="skill-text" contenteditable="true">Org and work</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>';
+    });
+
+
     $('#add-skill-btn').click(function(){
         document.getElementById('skill-list').innerHTML += '<div class="skill-block"><div class="skill-text" contenteditable="true">Skill</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></div>';
     });
