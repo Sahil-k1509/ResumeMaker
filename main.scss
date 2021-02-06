@@ -219,12 +219,12 @@ header{
             }
 
             .post{
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
 
             .about{
                 padding: 0.2rem;
-                font-size: 0.7rem;
+                font-size: 0.8rem;
                 color: rgb(86, 148, 167);
                 margin-bottom: 0.3rem;
             }
@@ -407,7 +407,8 @@ header{
                     .education-table{
                         display: none;
                         width: 100%;
-                        margin-top: 0.4rem;
+                        margin-right: 0.5rem;
+                        margin-top: 0.5rem;
                         text-align: center;
                         font-size: 0.7rem;
 
@@ -481,23 +482,23 @@ header{
                             }
 
                             .content-item-head{
-                                font-size: 0.8rem;
+                                font-size: 1rem;
                                 font-weight: 600;
                             }
 
                             .brief-cont{
                                 display: flex;
-                                margin-left: 0.3rem;
+                                margin-left: 0.4rem;
 
                                 .content-item-role{
                                     color: grey;
                                     padding: 0 0.3rem;
-                                    font-size: 0.6rem;
+                                    font-size: 0.69rem;
                                     border-right: 0.1rem solid grey;
                                 }
                                 .content-item-duration{
                                     color: grey;
-                                    font-size: 0.6rem;
+                                    font-size: 0.69rem;
                                     padding-left: 0.3rem;
                                 }
                                 
@@ -535,7 +536,7 @@ header{
                                     list-style-type: none;
 
                                     .content-desc-text{
-                                        font-size: 0.6rem;
+                                        font-size: 0.7rem;
                                     }
                                     .delete-info{
                                         position: absolute;
@@ -621,10 +622,10 @@ header{
                         .skill-head{
                             font-weight: 600;
                             margin-right: 0.4rem;
-                            font-size: 0.7rem;
+                            font-size: 0.9rem;
                         }
                         .skill-text{
-                            font-size: 0.7rem;
+                            font-size: 0.8rem;
 
                             .skill-link:hover{
                                 cursor: pointer;

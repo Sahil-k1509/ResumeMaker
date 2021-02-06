@@ -271,12 +271,12 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 }
 
 .resume-container .resume-head .intro-section .post {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .resume-container .resume-head .intro-section .about {
   padding: 0.2rem;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: #5694a7;
   margin-bottom: 0.3rem;
 }
@@ -444,7 +444,8 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 .resume-container .main-resume .left-section .resume-section .section-content .education-table {
   display: none;
   width: 100%;
-  margin-top: 0.4rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
   text-align: center;
   font-size: 0.7rem;
 }
@@ -539,7 +540,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .content-item-head {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -547,19 +548,19 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 0.3rem;
+  margin-left: 0.4rem;
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .brief-cont .content-item-role {
   color: grey;
   padding: 0 0.3rem;
-  font-size: 0.6rem;
+  font-size: 0.69rem;
   border-right: 0.1rem solid grey;
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .brief-cont .content-item-duration {
   color: grey;
-  font-size: 0.6rem;
+  font-size: 0.69rem;
   padding-left: 0.3rem;
 }
 
@@ -600,7 +601,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .content-item-desc-list .content-item-desc-item .content-desc-text {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .content-item-desc-list .content-item-desc-item .delete-info {
@@ -690,11 +691,11 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 .resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item .skill-head {
   font-weight: 600;
   margin-right: 0.4rem;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 
 .resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item .skill-text {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item .skill-text .skill-link:hover {
