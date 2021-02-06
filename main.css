@@ -258,7 +258,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 3rem;
+  padding-left: 1rem;
 }
 
 .resume-container .resume-head .intro-section {
@@ -356,6 +356,10 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   display: none;
 }
 
+.resume-container .main-resume.download-active .right-section .resume-section .resume-skills-list .skill-smpro .smpro-main .smpro-head-link .smpro-link .link-input {
+  display: none;
+}
+
 .resume-container .main-resume.download-active .right-section .resume-section .add-more {
   display: none;
 }
@@ -371,7 +375,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   width: 66%;
   border-right: 0.1rem solid grey;
   padding: 0.2rem;
-  padding-left: 3rem;
+  padding-left: 1rem;
 }
 
 .resume-container .main-resume .left-section .resume-section.dragging {
@@ -495,14 +499,32 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .content-list {
-  padding: 0.3rem;
   display: block;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #005780;
+  border-radius: 50%;
+  -webkit-transform: translate(-150%, 90%);
+          transform: translate(-150%, 90%);
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item {
   position: relative;
-  margin: 0.3rem;
-  border-bottom: 0.1rem solid rgba(160, 160, 160, 0.411);
+  margin: 0.1rem;
+  list-style: none;
+}
+
+.resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .head-link-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .delete-info {
@@ -525,6 +547,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: 0.3rem;
 }
 
 .resume-container .main-resume .left-section .resume-section .section-content .content-list .content-item .brief-cont .content-item-role {
@@ -544,7 +567,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   color: #00668f;
   text-transform: uppercase;
   border-radius: 0.2rem;
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   padding: 0.1rem;
   text-decoration: none;
   font-weight: 900;
@@ -646,16 +669,22 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   padding-left: 0.8rem;
 }
 
+.resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #005780;
+  border-radius: 50%;
+  -webkit-transform: translate(-150%, 90%);
+          transform: translate(-150%, 90%);
+}
+
 .resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item {
   position: relative;
-  padding: 0.1rem;
-  border-bottom: 0.1rem solid rgba(158, 158, 158, 0.459);
-  margin: 0.2rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  list-style: none;
 }
 
 .resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-item .skill-head {
@@ -686,12 +715,60 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   cursor: pointer;
 }
 
+.resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-smpro .smpro-main .smpro-head-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-smpro .smpro-main .smpro-head-link .smpro-head {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-smpro .smpro-main .smpro-head-link .smpro-link {
+  margin-left: 0.3rem;
+}
+
+.resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-smpro .smpro-main .smpro-head-link .smpro-link .content-item-link {
+  color: #00668f;
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 900;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  display: block;
+}
+
+.resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-smpro .smpro-main .smpro-head-link .smpro-link .content-item-link:hover {
+  cursor: pointer;
+}
+
+.resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-smpro .smpro-main .smpro-head-link .smpro-link .link-input {
+  width: 4rem;
+  display: block;
+}
+
+.resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-smpro .smpro-main .smpro-content {
+  font-size: 0.7rem;
+}
+
+.resume-container .main-resume .right-section .resume-section .resume-skills-list .skill-smpro .delete-info {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
 .resume-container .main-resume .right-section .resume-section .resume-skill-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 0.4rem;
 }
 
 .resume-container .main-resume .right-section .resume-section .resume-skill-wrap .skill-block {
@@ -702,7 +779,7 @@ header .btn-cont .download-btn:hover, header .btn-cont .info:hover {
   background-color: #0065a0;
   color: white;
   padding: 0.2rem;
-  margin: 0.1rem;
+  margin: 0.2rem;
   border-radius: 0.3rem;
 }
 

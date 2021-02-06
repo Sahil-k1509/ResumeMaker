@@ -30,14 +30,14 @@
 
         let setlinkUrl = (elem) => {
             // alert('change');
-            console.log(elem.value)
-            console.log(elem.parentNode)
-            console.log(elem.parentNode.children)
+            // console.log(elem.value)
+            // console.log(elem.parentNode)
+            // console.log(elem.parentNode.children)
             elem.parentNode.children[0].setAttribute('href', elem.value);
         };
     </script>
 </head>
-<body class='active-info loading'>
+<body ><!--class='active-info 'loading'>-->
 
     <div class='preloader'>
         <div class='load-line line-1'></div>
@@ -53,13 +53,14 @@
         <div class="content-ins">
             <h2>Instructions & Tips</h2>
             <ul>
-                <li>Even though all sections have 4 points initially, please try to fit the information in only 1-2 points. Remember, A short and on point resume is better than long resume.</li>
-                <li>In any case, try not to exceed one page. A longer resume is most likely to get rejected as recruiters won't have time to go through all of it. Keep it short and reserve details for interview.</li>
                 <li>You can edit the content and download the resume in pdf format.</li>
                 <li>The sections on left side are reorderable. Drag and drop to change position.</li>
                 <li>Education section has switch button that switches to tabular format if you prefer it.</li>
                 <li>Right section Tab's headings can be changed in case you would like to add any other thing instead.</li>
                 <li>Enter the url in the input box and the link will redirect you to that link.</li>
+                <li>All sections have 4 points initially, but try to fit the information in only 1-2 points. A short and on point resume is better.</li>
+                <li>Try not to exceed one page. A longer resume is most likely to get rejected as recruiters won't have time to go through all of it. Keep it short and reserve details for interview.</li>
+                <li>All the best!</li>
             </ul>
         </div>
     </div>
@@ -82,12 +83,14 @@
             <div class="resume-head">
                 <div class="intro-section">
                     <div class='name' contenteditable="true">Your Name</div>
-                    <div class='post' contenteditable="true">(Describe your profile)</div>
-                    <div class="about" contenteditable="true">Write Something About Yourself in brief</div>
+                    <div class='post'>(<span contenteditable="true">Describe your profile</span>)</div>
+                    <div class="about" contenteditable="true">Write Something worth knowing about you.</div>
                 </div>
 
                 <div class="contact-section" id='contact-section'>
-                    <div class="skill-text"><a href="#" class='contact-link' style='text-decoration: none; color: rgb(0, 153, 255);' id='user-website'>Visit Website</a> <input  id='user-web-link' placeholder="Your website link" type="text" style="max-width: 60%;"></div>                    
+                    <div class="skill-text">
+                        <a href="#" class='contact-link' style='text-decoration: none; color: rgb(0, 153, 255);' id='user-website'>Website</a> <input  id='user-web-link' placeholder="Your website/github link" type="text" style="max-width: 60%;">
+                    </div>                    
                     <div class="skill-text" contenteditable="true">abc@demo.com</div>
                     <div class="skill-text" contenteditable="true">+91 1234567890</div>
                     <div class="skill-text" contenteditable="true">#123, xyz, India</div>
@@ -136,11 +139,14 @@
                             <ul class="content-list" id='project-list'>
                                 <li class="content-item">
                                     <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div>
-                                    <div class="content-item-head" contenteditable="true">Project Name</div>
                                     
-                                    <div class="brief-cont">
-                                        <a target='_blank' class="content-item-link">visit project</a>
-                                        <input type="text" class="link-input" placeholder="Enter url" onkeyup="setlinkUrl(this)">
+                                    <div class="head-link-section">
+                                        <div class="content-item-head" contenteditable="true">Project Name</div>
+                                        
+                                        <div class="brief-cont">
+                                            <a href='#' target='_blank' class="content-item-link"><i class="fa fa-paperclip"></i></a>
+                                            <input type="text" class="link-input" placeholder="Enter url" onkeyup="setlinkUrl(this)">
+                                        </div>
                                     </div>
                                     
                                     <ul class="content-item-desc-list">
@@ -154,6 +160,38 @@
                             </ul>
                             
                             <div class="add-more" id='add-project-btn'>+</div>
+
+                        </div>
+                    </div>
+
+                    <div class="resume-section draggable" draggable="true">
+                        <div class="delete-section fa fa-trash" onclick="deleteFromList(this)"></div>
+                        <div class="resume-section-head">Research:</div>
+                        
+                        <div class="section-content">
+                            <ul class="content-list" id='research-list'>
+                                <li class="content-item">
+                                    <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div>
+                                    <div class="head-link-section">
+                                        <div class="content-item-head" contenteditable="true">Research Heading</div>
+                                        
+                                        <div class="brief-cont">
+                                            <a href='#' target='_blank' class="content-item-link"><i class="fa fa-paperclip"></i></a>
+                                            <input type="text" class="link-input" placeholder="Enter url" onkeyup="setlinkUrl(this)">
+                                        </div>
+                                    </div>
+                                    
+                                    <ul class="content-item-desc-list">
+                                        <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Research Description</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                                        <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Research Description</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                                        <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Research Description</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                                        <li class="content-item-desc-item"><div class='content-desc-text' contenteditable="true">Research Description</div><div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                            
+                            <div class="add-more" id='add-research-btn'>+</div>
 
                         </div>
                     </div>
@@ -190,7 +228,6 @@
                                     <th class='tb-name'>Institution Name</th>
                                     <th class='tb-degree'>Degree</th>
                                     <th class='tb-grade'>Grade</th>
-                                    <th class='tb-ach'>Achivements</th>
                                     <th class='tb-year'>Year</th>
                                     <th class='tb-del'></th>
                                 </tr>
@@ -198,7 +235,6 @@
                                     <td contenteditable="true">Name of institute</td>
                                     <td contenteditable="true">Degree or Course</td>
                                     <td contenteditable="true">CGPA/grade</td>
-                                    <td contenteditable="true">Excellence award</td>
                                     <td><span contenteditable="true">from</span>-<span contenteditable="true">to</span></td>
                                     <td><div class="delete-info fa fa-trash" onclick="deleteFromList(this.parentNode)"></div></td>
                                 </tr>
@@ -206,7 +242,6 @@
                                     <td contenteditable="true">Name of institute</td>
                                     <td contenteditable="true">Degree or Course</td>
                                     <td contenteditable="true">CGPA/grade</td>
-                                    <td contenteditable="true">Excellence award</td>
                                     <td><span contenteditable="true">from</span>-<span contenteditable="true">to</span></td>
                                     <td><div class="delete-info fa fa-trash" onclick="deleteFromList(this.parentNode)"></div></td>
                                 </tr>
@@ -238,13 +273,35 @@
                         <div class="add-more" id='add-skill-btn'>+</div>
                     </div>
 
+                    <div class="resume-section">
+                        <div class="delete-section fa fa-trash" onclick="deleteFromList(this)"></div>
+                        <div class="resume-sec-head" >Small Projects:</div>
+                        
+                        <ul class="resume-skills-list" id='smpro-list'>
+                            <li class="skill-item skill-smpro">
+                                <div class="smpro-main">
+                                    <div class="smpro-head-link">
+                                        <div class="smpro-head" contenteditable="true">Project Name</div>
+                                        <div class="smpro-link">
+                                            <a href="#" target='_blank' class="content-item-link"><i class="fa fa-paperclip"></i></a>
+                                            <input type="text" class="link-input" placeholder="Enter url" onkeyup="setlinkUrl(this)">
+                                        </div>
+                                    </div>
+                                    <div class="smpro-content" contenteditable="true">Describe Project</div>
+                                </div>
+                                <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div>
+                            </li>
+                        </ul>
+                        
+                        <div class="add-more" id='add-smpro-btn'>+</div>
+                    </div>                    
 
                     <div class="resume-section">
                         <div class="delete-section fa fa-trash" onclick="deleteFromList(this)"></div>
                         <div class="resume-sec-head" contenteditable="true">Certifications:</div>
                         
                         <ul class="resume-skills-list" id='certi-list'>
-                            <li class="skill-item"><div class="skill-text" contenteditable="true">Ceritficates</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                            <li class="skill-item"><div class="skill-text" contenteditable="true">Ceritficate</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
                             <li class="skill-item"><div class="skill-text" contenteditable="true">Certificate</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
                             <li class="skill-item"><div class="skill-text" contenteditable="true">Certificate</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
                         </ul>
@@ -252,29 +309,37 @@
                         <div class="add-more" id='add-certificate-btn'>+</div>
                     </div>
 
-
                     <div class="resume-section">
                         <div class="delete-section fa fa-trash" onclick="deleteFromList(this)"></div>
-                        <div class="resume-sec-head" contenteditable="true">Publications:</div>
+                        <div class="resume-sec-head" contenteditable="true">Achievements:</div>
                         
-                        <ul class="resume-skills-list" id='publi-list'>
-                            <li class="skill-item"><div class="skill-text" contenteditable="true">Add Publication</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
-                            <li class="skill-item"><div class="skill-text" contenteditable="true">Add Publication</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
-                            <li class="skill-item"><div class="skill-text" contenteditable="true">Add Publication</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                        <ul class="resume-skills-list" id='ach-list'>
+                            <li class="skill-item">
+                                <div class="skill-text"><span contenteditable="true" style='font-weight: 900;'>Achievement</span> : <span contenteditable="true">Describe</span></div> 
+                                <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-text"><span contenteditable="true" style='font-weight: 900;'>Achievement</span> : <span contenteditable="true">Describe</span></div> 
+                                <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div>
+                            </li>
                         </ul>
                         
-                        <div class="add-more" id='add-publi-btn'>+</div>
+                        <div class="add-more" id='add-ach-btn'>+</div>
                     </div>
-
 
                     <div class="resume-section">
                         <div class="delete-section fa fa-trash" onclick="deleteFromList(this)"></div>
                         <div class="resume-sec-head" contenteditable="true">Volunteer Experience:</div>
                         
                         <ul class="resume-skills-list" id='vol-list'>
-                            <li class="skill-item"><div class="skill-text" contenteditable="true">Org and work</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
-                            <li class="skill-item"><div class="skill-text" contenteditable="true">Org and work</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
-                            <li class="skill-item"><div class="skill-text" contenteditable="true">Org and work</div> <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div></li>
+                            <li class="skill-item">
+                                <div class="skill-text"><span contenteditable="true" style='font-weight: 900;'>Organization</span> : <span contenteditable="true">Contribution</span></div> 
+                                <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-text"><span contenteditable="true" style='font-weight: 900;'>Organization</span> : <span contenteditable="true">Contribution</span></div> 
+                                <div class="delete-info fa fa-trash" onclick="deleteFromList(this)"></div>
+                            </li>
                         </ul>
                         
                         <div class="add-more" id='add-vol-btn'>+</div>
